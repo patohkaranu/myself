@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey - Skills & Talents</title>
+    <style>
+        body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; color: #444; line-height: 1.6; }
+        header { background-color:dark blue; color: #333; padding: 2rem 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+        nav { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 2rem; }
+        nav ul li a { color: #555; text-decoration: none; padding: 0.75rem 1.25rem; border-radius: 8px; transition: background-color 0.3s ease; }
+        nav ul li a:hover, nav ul li a.active { background-color: #d1e7dd; color: #198754; }
+        nav ul li a.active { font-weight: bold; }
+        main { padding: 3rem 20px; max-width: 960px; margin: 30px auto; background-color: #fff; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        section { margin-bottom: 0; padding: 2rem; border-bottom: none; }
+        h1 { color: #333; font-size: 2.2rem; margin-bottom: 1.5rem; text-align: center; grid-column: 1 / -1; }
+        .intro { color: #555; margin-bottom: 2rem; text-align: center; grid-column: 1 / -1; }
+        .skill-category { background-color: #e9ecef; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); }
+        .skill-category h2 { color: #198754; font-size: 1.6rem; margin-top: 0; margin-bottom: 1rem; border-bottom: 2px solid #d1e7dd; padding-bottom: 0.5rem; }
+        .skill-category ul { list-style: none; padding: 0; margin: 0; }
+        .skill-category ul li { color: #555; margin-bottom: 0.75rem; }
+        .hobby { background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); grid-column: 1 / -1; text-align: center; }
+        .hobby h2 { color: #007bff; font-size: 1.6rem; margin-top: 0; margin-bottom: 1rem; border-bottom: 2px solid #b8dfff; padding-bottom: 0.5rem; }
+        .hobby p { color: #555; }
+        footer { text-align: center; padding: 1.5rem 0; background-color: #333; color: #fff; position: fixed; bottom: 0; width: 100%; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="childhood.html">Childhood</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html" class="active">Skills & Talents</a></li>
+                <li><a href="aspirations.html">Future Aspirations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="skills">
+            <h1>My Abilities</h1>
+            <p class="intro">A showcase of my skills, talents, and hobbies that define me.</p>
+
+            <div class="skill-category">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>Programming Languages: Java, Python, HTML, CSS, JavaScript</li>
+
+                    <li>Software Development: Object-Oriented Programming (OOP), database management</li>
+
+                    <li>Web Development</li>
+
+                    <li>Database Management: SQL, MySQL</li>
+
+                    <li>Software Tools: Visual Studio Code, NetBeans, Git, JDK</li>
+
+                    <li>Networking & Security: Basic cybersecurity principles, computer networks, troubleshooting</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h2>Soft Skills</h2>
+                <ul>
+                    <li>Communication</li>
+                    <li>Teamwork</li>
+                    <li>Problem-solving</li>
+                    <li>Adaptability</li>
+                    
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h2>Creative Talents</h2>
+                <ul>
+                    <li>Writing & Documentation</li>
+                    <li>creative thinking</li>
+                    
+                </ul>
+            </div>
+
+            <div class="hobby">
+                <h2>Hobbies & Interests</h2>
+                <p>Outside of work and study, I enjoy ;</p>
+                <ul>
+                    <li>Gaming: Passion for playing PlayStation, especially sports</li>
+                    <li>Football Matches: Watching and analyzing football games</li>
+                    <li>Traveling: Exploring new places and experiencing different cultures</li>
+                    
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Journey</p>
+    </footer>
+
+    <script>
+        console.log('Skills & Talents JavaScript loaded.');
+    </script>
+</body>
+</html>

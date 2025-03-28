@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey - Contact Me</title>
+    <style>
+        body { font-family: 'Nunito', sans-serif; margin: 0; padding: 0; background-color: #f7faff; color: #555; line-height: 1.7; }
+        header { background-color: #fff; color: #333; padding: 2rem 0; text-align: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); }
+        nav { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 2rem; }
+        nav ul li a { color: #555; text-decoration: none; padding: 0.75rem 1.25rem; border-radius: 20px; transition: background-color 0.3s ease, color 0.3s ease; }
+        nav ul li a:hover, nav ul li a.active { background-color: #ffe0b2; color: #ff9800; }
+        nav ul li a.active { font-weight: bold; }
+        main { padding: 3rem 20px; max-width: 700px; margin: 40px auto; background-color: #fff; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); border-radius: 15px; }
+        section { margin-bottom: 2rem; padding: 2rem; border-bottom: 1px solid #eee; }
+        section:last-child { border-bottom: none; }
+        h1 { color: #ff9800; font-size: 2.6rem; margin-bottom: 1.5rem; text-align: center; }
+        .intro { color: #777; margin-bottom: 2rem; text-align: center; }
+        .contact-details { margin-bottom: 2.5rem; text-align: center; }
+        .contact-details p { margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .contact-details a { color: #007bff; text-decoration: none; transition: color 0.3s ease; }
+        .contact-details a:hover { color: #0056b3; }
+        .contact-form { margin-top: 2rem; padding: 2rem; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; color: #333; }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea { width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; font-size: 1rem; }
+        .form-group textarea { resize: vertical; }
+        .contact-form button[type="submit"] { background-color: #ff9800; color: #fff; padding: 1rem 2rem; border: none; border-radius: 10px; cursor: pointer; font-size: 1.1rem; width: 100%; transition: background-color 0.3s ease; }
+        .contact-form button[type="submit"]:hover { background-color: #e65100; }
+        .hidden { display: none; }
+        footer { text-align: center; padding: 1.5rem 0; background-color: #333; color: #fff; position: fixed; bottom: 0; width: 100%; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="childhood.html">Childhood</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills & Talents</a></li>
+                <li><a href="aspirations.html">Future Aspirations</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h1>Let's Connect!</h1>
+            <p class="intro">I'd love to hear from you. Feel free to reach out with any questions or just to say hello!</p>
+
+            <div class="contact-details">
+                <p>Email: <a href="mailto:your.email@example.com">patrickkaranu49@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/feed/" target="_blank">patrick karanu</a></p>
+                <p>Twitter: <a href="https://x.com/home?lang=en target="_blank"> MyTwitter handle
+                </a></p>
+                
+            </div>
+
+            <div class="contact-form">
+                <h2>Send me a message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="7" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                    <p id="form-message" class="hidden"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Journey</p>
+    </footer>
+
+    <script>
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('form-message');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const formData = new FormData(contactForm);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const message = formData.get('message');
+
+                if (!name || !email || !message) {
+                    formMessage.textContent = 'Please fill out all required fields.';
+                    formMessage.classList.remove('hidden');
+                    return;
+                }
+
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    formMessage.textContent = 'Please enter a valid email address.';
+                    formMessage.classList.remove('hidden');
+                    return;
+                }
+
+                console.log('Name:', name);
+                console.log('Email:', email);
+                console.log('Message:', message);
+
+                formMessage.textContent = 'Message sent successfully! (I will get back to you as soon as possible)';
+                formMessage.classList.remove('hidden');
+                contactForm.reset();
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 3000);
+            });
+        }
+        console.log('Contact JavaScript loaded.');
+    </script>
+</body>
+</html>

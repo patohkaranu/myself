@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey - Home</title>
+    <style>
+        body { font-family: elephant; margin: 0; padding: 0; background-color: yellow; color: #333; line-height: 1.7; }
+        header { background-color: rgb(159, 153, 159); color: beige; padding: 2rem 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+        nav { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 2rem; }
+        nav ul li a { color: #555; text-decoration: none; padding: 0.75rem 1.25rem; border-radius: 8px; transition: background-color 0.3s ease; }
+        nav ul li a:hover, nav ul li a.active { background-color: #e0f7fa; color: #00838f; }
+        nav ul li a.active { font-weight: bold; }
+        main { padding: 3rem 20px; max-width: 960px; margin: 30px auto; background-color: #fff; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 12px; text-align: center; }
+        #hero { padding: 4rem 0; }
+        .profile-pic { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); }
+        h1 { color: #222; font-size: 2.5rem; margin-bottom: 1rem; }
+        .introduction { color: #555; font-size: 1.1rem; margin-bottom: 2rem; }
+        .interests { margin-bottom: 2.5rem; }
+        .interests h2 { color: #00838f; font-size: 1.5rem; margin-bottom: 1rem; }
+        .interests ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 1.5rem; }
+        .interests ul li { background-color: #e0f7fa; color: #00838f; padding: 0.75rem 1.5rem; border-radius: 8px; font-size: 0.9rem; /* Resized the interest list items */ }
+        .goals { color: #555; margin-bottom: 2rem; font-size: 1rem; /* Resized the goals text */ }
+        .call-to-action a { display: inline-block; background-color: #00838f; color: #fff; padding: 1rem 2rem; text-decoration: none; border-radius: 10px; margin-top: 2rem; font-weight: bold; transition: background-color 0.3s ease; font-size: 1rem; /* Resized the call to action button text */ }
+        .call-to-action a:hover { background-color: #005c5e; }
+        footer { text-align: center; padding: 1.5rem 0; background-color: #333; color: #fff; position: fixed; bottom: 0; width: 100%; font-size: 0.8rem; /* Resized the footer text */ }
+        .profile-pic {
+            /* Remove fixed width and height if you want the natural size */
+            /* width: 180px;
+            height: 180px; */
+            border-radius: 100%; 
+            object-fit: contain; 
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+   </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="childhood.html">Childhood</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills & Talents</a></li>
+                <li><a href="aspirations.html">Future Aspirations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <img src="profile pic.jpg" alt="Your Profile Picture" class="profile-pic">
+                <h1 style="font-size: 1.2rem;">Hello, my name is Patrick, a passionate IT student at Zetech University. I have always been fascinated by technology and its endless possibilities. My interests include exploring emerging tech trends, coding innovative solutions, and enhancing my problem-solving skills. Beyond academics, I enjoy engaging in sports and gaming, which help me maintain a balanced and creative mindset. My ultimate goal is to leverage my IT skills to develop impactful software solutions that simplify everyday tasks and drive technological advancements.</h1>
+                <p class="introduction" style="font-size: 1rem;">I have always been fascinated by technology and its endless possibilities. My interests include emerging tech trends, coding, and exploring innovative solutions.</p>
+                <div class="interests">
+                    <h2 style="font-size: 1.3rem;">My Interests</h2>
+                    <ul>
+                        <li>Emerging Tech Trends</li>
+                        <li>Coding (Python, JavaScript)</li>
+                        <li>Innovative Solutions</li>
+                    </ul>
+                </div>
+                <p class="goals" style="font-size: 0.9rem;">My overarching goals include contributing meaningfully to the tech industry and continuously learning and growing.</p>
+                <div class="call-to-action">
+                    <a href="childhood.html" style="font-size: 0.9rem;">Discover More About My Journey</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Journey</p>
+    </footer>
+
+    <script>
+        console.log('Homepage JavaScript loaded.');
+    </script>
+</body>
+</html>
